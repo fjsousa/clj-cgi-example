@@ -9,6 +9,8 @@ services:
     ports:
       - 5432:5432
   web:
+    environment:
+      - ENV
     network_mode: "host"
     build: .
     volumes:
