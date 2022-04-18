@@ -9,11 +9,13 @@ services:
     ports:
       - 5432:5432
   web:
+    network_mode: "host"
     build: .
     volumes:
-      - "./public_html:/var/www/public_html"
-    ports:
-      - "8080:80"
+      #- "./public_html:/var/www/public_html"
+      - "/home/fsousa/src/bb-passrates:/var/www/public_html"
+    #ports:
+    #  - "8081:80"
 
 volumes:
   pgdata:

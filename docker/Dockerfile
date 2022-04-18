@@ -22,8 +22,10 @@ WORKDIR /
 
 RUN curl -s https://raw.githubusercontent.com/babashka/babashka/master/install  > ./install \
     && chmod +x ./install \
-    && ./install --version "0.2.9"
+    && ./install --dir /usr/home/codecan/bin/ #--version "0.2.9"
 
+# repl with history
+RUN apt install rlwrap
 
 EXPOSE 80
 VOLUME /var/www/public_html
