@@ -15,7 +15,10 @@ services:
     build: .
     volumes:
       #- "./public_html:/var/www/public_html"
-      - "/home/fsousa/src/bb-passrates:/var/www/public_html"
+      #- "/home/fsousa/src/bb-passrates:/var/www/public_html"
+      #- "/home/fsousa/src/allmylinks:/var/www/public_html"
+      - "/home/fsousa/src/flaviosousa.co:/var/www/public_html"
+      #- "/home/fsousa/src/codecadre:/var/www/public_html"
     #ports:
     #  - "8081:80"
 
